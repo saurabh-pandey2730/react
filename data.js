@@ -18,5 +18,10 @@
     "name": "Boothe Reinhardt",
     "email": "breinhardt3@cbsnews.com",
     "gender": "Male"
+  }, {
+    "id": 5,
+    "name": "Saurabh Pandey",
+    "email": "saurabh@gmail.com",
+    "gender": "Male"
   }]
    export default usersData

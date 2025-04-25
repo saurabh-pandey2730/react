@@ -29,3 +29,9 @@
     border-radius: 10px;
     background-color: #1bdf18; border: none; padding: 10px 20px; cursor: pointer;
 }
+.btn-data{
+    margin-left: 20px;
+    border-radius: 10px;
+    color: white;
+    background-color: #1118a4; border: none; padding: 10px 20px; cursor: pointer;
+}

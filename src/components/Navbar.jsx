@@ -10,7 +10,7 @@ const Navbar = ({logo ,MenuData}) => {
           <div className='menu-items'>
             {
               MenuData.map((data)=>{
-                return <a href="">{data}</a>
+                return <a key={data.id} href="">{data}</a>
               })
             }
           </div>
