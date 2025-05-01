@@ -1,13 +1,15 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 const Counter = () => {
 
-               const [number,setNumber]  = useState(0)
+        const [number,setNumber]  = useState(0)
       
         function IncreaseNumber(){
             setNumber(number+1)
         }
-       
+      useEffect(()=>{
+        console.log("useEffect called and fetching data")  
+      },[]) 
                 
   return (
 
