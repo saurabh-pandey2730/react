@@ -4,8 +4,9 @@ import Navbar from './components/Navbar'
  import Users from './components/Users' 
 import usersData from '../data'
 import Counter from './components/Counter'
-
+import MyContextProvider from './components/context/MyContextProvider'
 import Joke from './components/Joke'
+import UseContext from './components/UseContext'
 function App() {
   
 
@@ -16,11 +17,14 @@ function App() {
           //  console.log(jokeData)
      
   return (
-    <>
+    <MyContextProvider>
      <Navbar  logo={logoURL} MenuData={items} />
-    <Joke  />
+     <Joke  />
       {/* <button onClick={()=>fetchData()}>next</button> */}
-    </>
+      <UseContext/>
+
+     
+    </MyContextProvider>
   )
 }
 

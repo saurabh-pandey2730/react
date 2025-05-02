@@ -1,8 +1,9 @@
-import { useState , useEffect } from "react"
-
-
+import { useState , useEffect,useContext } from "react"
+import MyContext from "./context/UseContext"
+      
 const Joke = () => {
   
+  let {Name} = useContext(MyContext) 
     const [jokeData, setJokeData] = useState({})
     const[punchline, setPunchline] =useState(null)
     
@@ -41,7 +42,7 @@ const Joke = () => {
            <div className="joke-btn">
            <button onClick={punchlineData} >{punchline? "hide":"show"}</button>
            <button onClick={anotherJoke} >another</button> 
-         
+            <p>{Name}</p>
 
            </div>
     </div>
