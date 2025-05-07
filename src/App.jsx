@@ -7,20 +7,26 @@ import Counter from './components/Counter'
 import MyContextProvider from './components/context/MyContextProvider'
 import Joke from './components/Joke'
 import UseContext from './components/UseContext'
-function App() {
-  
-
+import MyContext from './components/context/UseContext' 
+import { useContext } from 'react'
  
-  let logoURL = "https://logos-world.net/wp-content/uploads/2020/11/Flipkart-Logo-2007-2015.png"
-  let items=['home', 'about', 'contact', 'services' , 'projects' ] 
+function App() {
 
-          //  console.log(jokeData)
+
+   
+
+
+    
+
+
+  // console.log(imgUrl)
+          
      
   return (
     <MyContextProvider>
-     <Navbar  logo={logoURL} MenuData={items} />
+     <Navbar />
      <Joke  />
-      {/* <button onClick={()=>fetchData()}>next</button> */}
+      
       <UseContext/>
 
      

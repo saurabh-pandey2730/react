@@ -1,16 +1,20 @@
+import { useContext } from 'react'
 import  './Navbar.css'
+import MyContext from './context/UseContext'
 
-const Navbar = ({logo ,MenuData}) => {
 
-  // console.log(data)
+
+const Navbar = () => {
+
+    let {imgUrl, itemsData}=useContext(MyContext)
 
   return (
     <div className="navbar">
-       <img src={logo} alt="" />
+       <img src={imgUrl} alt="" />
           <div className='menu-items'>
             {
-              MenuData.map((data)=>{
-                return <a key={data.id} href="">{data}</a>
+              itemsData.map((data, key)=>{
+                return <a key={key} href="">{data}</a>
               })
             }
           </div>
