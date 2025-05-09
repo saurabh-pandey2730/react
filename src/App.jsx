@@ -9,6 +9,7 @@ import Joke from './components/Joke'
 import UseContext from './components/UseContext'
 import MyContext from './components/context/UseContext' 
 import { useContext } from 'react'
+import UseCounter from './components/CustomHooks'
  
 function App() {
 
@@ -25,10 +26,10 @@ function App() {
   return (
     <MyContextProvider>
      <Navbar />
-     <Joke  />
+     {/* <Joke  /> */}
       
-      <UseContext/>
-
+      {/* <UseContext/> */}
+  {/* <UseCounter/> */}
      
     </MyContextProvider>
   )
