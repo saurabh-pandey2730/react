@@ -5,7 +5,14 @@ const Counter = () => {
         const [number,setNumber]  = useState(0)
       
         function IncreaseNumber(){
-            setNumber(number+1)
+          // console.log('before setFun',number)
+          // setNumber(number+1)
+          // setNumber(number+1)
+          // setNumber(number+1)
+           setNumber((prev)=>prev+1)
+           setNumber((prev)=>prev+1)
+           setNumber((prev)=>prev+1)
+          // console.log('after setFun',number)
         }
       useEffect(()=>{
         console.log("useEffect called and fetching data")  

@@ -30,7 +30,7 @@ function App() {
       
       {/* <UseContext/> */}
   {/* <UseCounter/> */}
-     
+     <Counter/>
     </MyContextProvider>
   )
 }
