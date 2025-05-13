@@ -22,7 +22,7 @@ const Counter = () => {
 
     <div>
         <h1>Counter APP</h1>
-         <h1>{number}</h1>
+         <h1 className="text-3xl ml-24 mb-5">{number}</h1>
 
         <button className="btn-data" onClick={IncreaseNumber}>Increase+</button>
         <button className="btn-data" onClick={()=>setNumber(number-1)}>Decrease-</button>
