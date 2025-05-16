@@ -11,13 +11,25 @@ import UseContext from './components/UseContext'
 import MyContext from './components/context/UseContext' 
 import { useContext } from 'react'
 import UseCounter from './components/CustomHooks'
- 
-function App() {
+ import React, { lazy, Suspense, useState } from 'react';
 
+const UserData = lazy(() => import('./components/UserComponents'));
+function App() {
+  const [showUsers, setShowUsers] = useState(false);
   return (
     <BrowserRouter>
       <MyContextProvider>
        <Navbar />
+        <div style={{ padding: '2rem' }}>
+      <h1>Lazy Loaded API Data</h1>
+      <button onClick={() => setShowUsers(true)}>Load Users</button>
+
+      {showUsers && (
+        <Suspense fallback={<p>Loading component...</p>}>
+          <UserData />
+        </Suspense>
+      )}
+    </div>
       <Routes>
            <Route path='/' element={<h1>Welcome to Home Page</h1>}/>
            <Route path='/jokes' element={  <Joke  />}/>
