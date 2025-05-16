@@ -1,5 +1,6 @@
 
 import './App.css'
+import {BrowserRouter,  Routes, Route} from 'react-router-dom'
 import Navbar from './components/Navbar'
  import Users from './components/Users' 
 import usersData from '../data'
@@ -13,25 +14,24 @@ import UseCounter from './components/CustomHooks'
  
 function App() {
 
-
-   
-
-
-    
-
-
-  // console.log(imgUrl)
-          
-     
   return (
-    <MyContextProvider>
-     <Navbar />
-     {/* <Joke  /> */}
+    <BrowserRouter>
+      <MyContextProvider>
+       <Navbar />
+      <Routes>
+           <Route path='/' element={<h1>Welcome to Home Page</h1>}/>
+           <Route path='/jokes' element={  <Joke  />}/>
+           <Route path='/counter' element={<Counter/>}/>
+
+
+      </Routes>
+        
       
-      {/* <UseContext/> */}
-  {/* <UseCounter/> */}
-     <Counter/>
-    </MyContextProvider>
+          {/* <UseContext/> */}
+          {/* <UseCounter/> */}
+        
+      </MyContextProvider>
+    </BrowserRouter>
   )
 }
 
